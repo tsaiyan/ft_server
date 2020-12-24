@@ -24,10 +24,10 @@ chown -R www-data:www-data /var/www/html/phpmyadmin
 cp -r /tmp/config.inc.php /var/www/html/phpmyadmin/config.inc.php
 rm -rf /tmp/*
 cd /lolcat-master/bin
-gem install lolcat
+#gem install lolcat
 cd
-rm master.zip
-rm -rf /lolcat-master/
-toilet -f ivrit 'Server online!' | boxes -d cat -a hc -p h8 | lolcat -t -a -d 5
-echo 'powered by tsaiyan' | lolcat -t -a -d 500000000
+#rm master.zip
+#rm -rf /lolcat-master/
+#toilet -f ivrit 'Server online!' | boxes -d cat -a hc -p h8 | lolcat -t -a -d 1
+#echo 'powered by tsaiyan' | lolcat -t -a -d 500000000
 bash

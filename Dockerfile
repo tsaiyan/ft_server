@@ -12,10 +12,14 @@ COPY /srcs/default ./etc/nginx/sites-available/default
 COPY /srcs/index.php ./var/www/html/index.php
 COPY /srcs/wp-config.php /tmp/wp-config.php
 COPY /srcs/config.inc.php tmp/config.inc.php
-RUN apt -y install toilet boxes figlet ruby && wget https://github.com/busyloop/lolcat/archive/master.zip && unzip master.zip
+#RUN apt -y install toilet
+#RUN apt -y install boxes
+#RUN apt -y install figlet
+#RUN apt -y install ruby
+#RUN wget https://github.com/busyloop/lolcat/archive/master.zip && unzip master.zip
 WORKDIR /etc/ssl/
 RUN openssl req -x509 -out localhost.crt -keyout localhost.key -newkey rsa:2048 -nodes -sha256 -subj '/CN=medovar'
 WORKDIR /
-CMD cd lolcat-master/bin && gem install lolcat
+#CMD cd lolcat-master/bin && gem install lolcat
 CMD sh init.sh
 EXPOSE 80
