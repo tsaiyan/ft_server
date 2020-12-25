@@ -22,4 +22,4 @@ RUN openssl req -x509 -out localhost.crt -keyout localhost.key -newkey rsa:2048 
 WORKDIR /
 #CMD cd lolcat-master/bin && gem install lolcat
 CMD sh init.sh
-EXPOSE 80
+EXPOSE 80 443
