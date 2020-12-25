@@ -17,17 +17,17 @@ echo "FLUSH PRIVILEGES;" | mysql -u root -p --skip-password
 echo "CREATE DATABASE phpmyadmin;" | mysql -u root -p --skip-password
 echo "GRANT ALL PRIVILEGES ON phpmyadmin.* TO medovar@localhost;" | mysql -u root -p --skip-password
 echo "FLUSH PRIVILEGES;" | mysql -u root -p --skip-password
+#copy configs
 cp -r /tmp/wp-config.php /var/www/html/wordpress/wp-config.php
 tar xvf /tmp/phpMyAdmin-4.9.7-all-languages.tar.gz
 cp -r /tmp/phpMyAdmin-4.9.7-all-languages /var/www/html/phpmyadmin
-chown -R www-data:www-data /var/www/html/phpmyadmin
 cp -r /tmp/config.inc.php /var/www/html/phpmyadmin/config.inc.php
-rm -rf /tmp/*
-cd /lolcat-master/bin
-#gem install lolcat
-cd
-#rm master.zip
-#rm -rf /lolcat-master/
-#toilet -f ivrit 'Server online!' | boxes -d cat -a hc -p h8 | lolcat -t -a -d 1
-#echo 'powered by tsaiyan' | lolcat -t -a -d 500000000
+
+#visual
+gem install lolcat
+rm ../master.zip
+rm -rf ../lolcat-master
+rm -rf *
+toilet -f ivrit 'Server online!' | boxes -d cat -a hc -p h8 | lolcat -t -a -d 1
+echo 'powered by tsaiyan' | lolcat -t -a -d 500000000
 bash
